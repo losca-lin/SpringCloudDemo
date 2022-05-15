@@ -1,0 +1,19 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: user
+  profiles:
+    active: register,datasource,amqp,redis
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.142.201:8849
+        file-extension: yml
+        prefix: lin
+#将响应时间拉长到30秒
+ribbon:
+  ReadTimeOut: 30000
+  ConnectionTimeOut: 30000
+
+

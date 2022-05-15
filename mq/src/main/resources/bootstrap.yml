@@ -1,0 +1,13 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: mq
+  profiles:
+    active: register,amqp,email
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.142.201:8849
+        file-extension: yml
+        prefix: lin

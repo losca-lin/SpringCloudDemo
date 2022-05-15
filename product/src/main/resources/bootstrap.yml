@@ -1,0 +1,13 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: product
+  profiles:
+    active: register,datasource,redis
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.142.201:8849
+        file-extension: yml
+        prefix: lin
